@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title>STG科技社-主页</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
+            integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
+            integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
+            crossorigin="anonymous"
+        ></script>
+        
+   </head>
+   <body class="mdui-appbar-with-toolbar">
+        <header class="mdui-appbar mdui-appbar-fixed">
+			<div class="mdui-toolbar mdui-color-blue-a400">
+                <img src='img/logo.png' class="logo-img img-responsive" alt="主logo">
+				<a href="javascript:;" class="mdui-typo-headline" onclick="back_to_index()">PYR Wiki-Home</a>
+				
+				<div class="mdui-toolbar-spacer"></div>
+				
+				<a href="javascript:;" class="mdui-btn mdui-btn-icon" id="menuBtn"><i class="mdui-icon material-icons">more_vert</i></a>
+
+				<ul class="mdui-menu" id="menu">
+                    <li class="mdui-menu-item">
+                      <a href="javascript:;" class="mdui-ripple" onclick="Jump_to_Github()">
+                        <img class="mdui-icon material-icons menu-github-ico" src="img/Logo GitHub.png">跳转至Github
+                      </a>
+                    </li>
+                    <li class="mdui-menu-item">
+                      <a href="javascript:;" class="mdui-ripple" onclick="Jump_to_Minebbs()">
+                        <img class="mdui-icon material-icons menu-github-ico" src="img/minebbs.png">跳转到Minebbs
+                      </a>
+                    </li>
+                  </ul>
+			</div>
+		</header>
+        <div class="top-title mdui-color-theme-a200">
+            <h1 class="title mdui-text-color-black-text">STG 科技社，欢迎您的加入！</h1>
+        </div>
+        
+        <a name='Introduction'>
+            
+        </a>
+
+        <script src='js/index.js'></script>
+        <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+        <script src="js/jquery.js"></script>
+   </body>
+</html>
