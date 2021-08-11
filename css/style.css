@@ -125,4 +125,7 @@
     box-sizing: border-box;
     background-color: white;
     border-radius: 25px;
+    white-space:normal; 
+    word-break:break-all;
+    overflow: hidden;
 }

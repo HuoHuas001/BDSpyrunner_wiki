@@ -35,12 +35,10 @@ var apis = document.getElementsByClassName('API')
 //添加索引
 for(var i=0;i<apis.length;i++){
    apibtn[i].index = i
-   console.log(apibtn[i].index)
    apibtn[i].onclick = function(){
        for(var b=0;b<apis.length;b++){
            apis[b].className = 'API no-show'
        }
-       console.log(this.index)
        apis[this.index].className = 'API show'
    } 
 }
