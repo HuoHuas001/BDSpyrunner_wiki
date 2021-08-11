@@ -18,10 +18,10 @@
         ></script>
         
    </head>
-   <body class="mdui-appbar-with-toolbar mdui-color-light-blue-50">
-        <header class="mdui-appbar mdui-appbar-fixed">
-			<div class="mdui-toolbar mdui-color-blue-a400">
-                <img src='img/logo.png' class="logo-img img-responsive" alt="主logo">
+   <body class="mdui-appbar-with-toolbar mdui-color-light-blue-50" style="min-width: 500px;">
+        <header class="mdui-appbar mdui-appbar-fixed" >
+			<div class="mdui-toolbar mdui-color-blue-a400" style='height: 70px;'>
+                <img src='img/logo.png' class="logo-img img-responsive" alt="PYR logo">
 				<a href="javascript:;" class="mdui-typo-headline" onclick="back_to_index()">PYR Wiki-Home</a>
 				
 				<div class="mdui-toolbar-spacer"></div>
@@ -43,24 +43,152 @@
 			</div>
 		</header>
         <div class="top-title mdui-color-theme-a200">
-            <h1 class="title mdui-text-color-black-text"></h1>
+            <h1 class="title mdui-text-color-black-text" id='title'>PYR Wiki-Home</h1>
         </div>
         
         <a name='Introduction'>
             
         </a>
-        <div id="left" class="input_text mdui-color-blue sideboard">
+        <div id="left" class="input_text mdui-color-blue-a100 sideboard">
             <p class="index-p" style="color: #ffffff; margin-top: 3px;">WIKI索引</p>
-
+                <a href="#home" id="JHome"><button class="mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-color-blue-a400">1.主页</button></a>
+                <a href="#api" id="JApi"><button class="mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-color-blue-a400" style='margin-top: 3px;'>2.API</button></a>
+                <a href="#listener" id="JHome"><button class="mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-color-blue-a400" style='margin-top: 3px;'>3.监听器</button></a>
             </p>
             <img src="https://img.shields.io/github/license/twoone-3/BDSpyrunner"><br>
             <img src="https://img.shields.io/github/downloads/twoone-3/BDSpyrunner/total"><br>
             <img src="https://img.shields.io/github/v/release/twoone-3/BDSpyrunner"><br>
-            <img src="https://img.shields.io/github/commit-activity/m/twoone-3/BDSpyrunner"><br>
+            <!--<img src="https://img.shields.io/github/commit-activity/m/twoone-3/BDSpyrunner"><br>-->
             <img src="https://img.shields.io/github/issues/twoone-3/BDSpyrunner">
         </div>
-        <div style="width: 85%; margin-left: 15%;" class="mdui-color-lime-100 main-content">
-            <p>aaaa</p>
+        <div class="mdui-color-lime-100 main-content">
+            <!--简介-->
+            <div style="margin-left: 10px; margin-top: 10px; margin-bottom: 10px;">
+                <h1 class="mdui-text-color-black-text"><a name='home'>1.主页</a></h1>
+                <p>
+                    <h2 class="mdui-text-color-black-text fonts" style="font-weight: bolder; margin-left: 10px;">PYR简介</h2>
+                    <div class="">
+                        <span class="mdui-color-grey-100 fonts">BDSpyrunner</span><span style="font-family: 'font/H.ttf';font-weight: bolder;">(以下简称pyr)是一个运行在BDS(Bedrock Dedicated Server)的的插件加载平台</span>
+                    </div>
+                    
+                </p>
+                <p>
+                    <div class="">
+                        <span class="fonts">通过使用CPython与Detours给Python提供多种监听器和API函数，有效简化了插件的开发成本</span>
+                    </div>
+                </p>
+                <p>
+                    <h2 class="mdui-text-color-black-text" style="font-weight: bolder; margin-left: 10px;">安装PYR</h3>
+                    <div class="">
+                        <span class="fonts">1.下载BDXCore并解压到BDS根目录</span><br>
+                        <span class="fonts">2.运行Rodb.exe</span><br>
+                        <span class="fonts">3.然后运行BDS 确保BDXCore成功加载</span><br>
+                        <span class="fonts">4.将pyr放入bdxcore_mod文件夹</span><br>
+                        <span class="fonts">5.前往<a href="https://www.python.org/ftp/python/3.7.9/python-3.7.9-amd64.exe">Python官网</a> 下载安装Python3.7.9 记得勾选添加到环境变量</span><br>
+                        <span class="fonts">6.再次运行BDS，如果看到[BDSpyrunner] x.x.x loaded.，则pyr加载成功了</span><br>
+                        <span class="fonts">7.将插件放入./plugins/py，再次运行BDS，就可以正常使用了</span><br>
+                    </div>
+                </p>
+                <p>
+                    <h2 class="mdui-text-color-black-text" style="font-weight: bolder; margin-left: 10px;">插件开发</h2>
+                    <span class="fonts">Pyr成功加载后，即可开始编写插件了，可在以下页面获得一些帮助。</span><br>
+                    <div style="margin-left: 30px;">
+                        <a href="#api"><button class="mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-color-blue-a400" style='margin-top: 3px;'>API接口</button></a>
+                        <button class="mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-color-blue-a400" style='margin-top: 3px;'>监听器</button>
+                    </div>
+                </p>
+                <p>
+                    <h2 class="mdui-text-color-black-text" style="font-weight: bolder; margin-left: 10px;">联系我们</h2>
+                    <span class="fonts">QQ群:1167270197<button class="mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-color-blue-a400" style='margin-left: 8px;' onclick="Jump_to_QQ()">一键加入QQ群</button></span>
+                </p>
+                <div class="mdui-typo">
+                    <hr/>
+                </div>
+                <!--API-->
+                <h1 class="mdui-text-color-black-text"><a name='api'>2.API接口</a></h1>
+                <div>
+                    <div id='mcmodbtn' class="APIs">
+                        <button class="APIBtn mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-color-cyan-a700" style='margin-top: 3px;'>getVersion</button>
+                        <button class="APIBtn mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-color-cyan-a700" style='margin-top: 3px;'>logout</button>
+                        <button class="APIBtn mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-color-cyan-a700" style='margin-top: 3px;'>runcmd</button>
+                        <button class="APIBtn mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-color-cyan-a700" style='margin-top: 3px;'>setListener</button>
+                        <button class="APIBtn mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-color-cyan-a700" style='margin-top: 3px;'>setCommandDescription</button>
+                        <button class="APIBtn mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-color-cyan-a700" style='margin-top: 3px;'>setServerMotd</button>
+                        <button class="APIBtn mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-color-cyan-a700" style='margin-top: 3px;'>getBlock</button>
+                        <button class="APIBtn mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-color-cyan-a700" style='margin-top: 3px;'>setBlock</button>
+                        <button class="APIBtn mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-color-cyan-a700" style='margin-top: 3px;'>getStructure</button>
+                        <button class="APIBtn mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-color-cyan-a700" style='margin-top: 3px;'>setStructure</button>
+                        <button class="APIBtn mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-color-cyan-a700" style='margin-top: 3px;'>getPlayerByXuid</button>
+                        <button class="APIBtn mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-color-cyan-a700" style='margin-top: 3px;'>getPlayerList</button>
+                        <button class="APIBtn mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-color-cyan-a700" style='margin-top: 3px;'>setDamage</button>
+                        <button class="APIBtn mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-color-cyan-a700" style='margin-top: 3px;'>explode</button>
+                    </div>
+                    <div ></div>
+                    <div id='mcmod' class='APIs2'>
+                        <div>
+                            <h2 class="fonts title">1.mc</h2>
+                            <p class="prod2">解释:mc模块的函数</p>
+                        </div>
+                        <div class="API show">
+                            <h3 class="fonts title in-title">1.getVersion() -> <span class="return">int</span></h3>
+                            <p class="prod">>> 获取pyr代码版本</p>
+                        </div>
+                        <div class="API no-show">
+                            <h3 class="fonts title in-title">2.logout(输出文本:str) -> <span class="return">none</span></h3>
+                            <p class="prod">>> 向控制台发送输出消息(可拦截)</p>
+                        </div>
+                        <div class="API no-show">
+                            <h3 class="fonts title in-title">3.runcmd(指令:str) -> <span class="return">none</span></h3>
+                            <p class="prod">>> 执行一条控制台命令</p>
+                        </div>
+                        <div class="API no-show">
+                            <h3 class="fonts title in-title">4.setListener(监听器:str,函数:function) -> <span class="return">none</span></h3>
+                            <p class="prod">>> 设置function作为str事件监听器，function必须是只有一个参数的函数，事件触发时function将被调用，这个参数是附带的数据</p>
+                        </div>
+                        <div class="API no-show">
+                            <h3 class="fonts title in-title">5.setCommandDescription(指令:str,描述:str) -> <span class="return">none</span></h3>
+                            <p class="prod">>> 设置指令说明，a1为指令字符串，a2为描述，方便玩家补全</p>
+                        </div>
+                        <div class="API no-show">
+                            <h3 class="fonts title in-title">6.setServerMotd(Motd:str) -> <span class="return">none</span></h3>
+                            <p class="prod">>> 设置服务器外显名字</p>
+                        </div>
+                        <div class="API no-show">
+                            <h3 class="fonts title in-title">7.getBlock(x坐标:int,y坐标:int,z坐标:int,维度:int) -> <span class="return">dict</span></h3>
+                            <p class="prod">>> 获取指定位置方块信息</p>
+                        </div>
+                        <div class="API no-show">
+                            <h3 class="fonts title in-title">8.setBlock(方块:str,x坐标:int,y坐标:int,z坐标:int,维度:int) -> <span class="return">none</span></h3>
+                            <p class="prod">>> 设置指定位置的方块，a1是方块名称，大小写必须正确，否则会失败</p>
+                        </div>
+                        <div class="API no-show">
+                            <h3 class="fonts title in-title">9.getStructure(x坐标1:int,y坐标1:int,z坐标1:int,x坐标2:str,y坐标2:int,z坐标2:int,维度:int) -> <span class="return">mone</span></h3>
+                            <p class="prod">>> 获取两个坐标之间的结构，did是维度ID，返回值是结构JSON字符串</p>
+                        </div>
+                        <div class="API no-show">
+                            <h3 class="fonts title in-title">10.setStructure(结构JSON:str,x坐标:int,y坐标:int,z坐标:str,维度:int) -> <span class="return">str</span></h3>
+                            <p class="prod">>> 在xyz设放置一个结构，did是维度ID，struct是结构JSON字符串</p>
+                        </div>
+                        <div class="API no-show">
+                            <h3 class="fonts title in-title">11.getPlayerByXuid(Xuid:str) -> <span class="return">Entity对象</span></h3>
+                            <p class="prod">>> 根据Xuid获取玩家</p>
+                        </div>
+                        <div class="API no-show">
+                            <h3 class="fonts title in-title">12.getPlayerList() -> <span class="return">list</span></h3>
+                            <p class="prod">>> 获取玩家列表</p>
+                        </div>
+                        <div class="API no-show">
+                            <h3 class="fonts title in-title">13.setDamage(伤害值:int) -> <span class="return">none</span></h3>
+                            <p class="prod">>> 设置生物受伤的伤害值</p>
+                            <p class="prod" style="color: red;">#注:此函数仅在onMobHurt事件下调用才能生效</p>
+                        </div>
+                        <div class="API no-show">
+                            <h3 class="fonts title in-title">14.explode(x坐标:float,y坐标:float,z坐标:float,维度:int,强度:float,是否破坏方块:bool,范围:float,是否着火:bool) -> <span class="return">none</span></h3>
+                            <p class="prod">>> 产生一个爆炸</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <script src='js/index.js'></script>
         <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery"> -->

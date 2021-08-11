@@ -1,5 +1,6 @@
 .logo-img{
-    width: 60px;
+    width: 17%;
+    max-width: 60px;
     height: 60px;
 }
 
@@ -10,8 +11,8 @@
 }
 
 .top-title{
-    height: 50px;
-    width: 500px;
+    height: 20px;
+    width: auto;
     text-align: center; 
     /*line-height: 200px;文字水平居中*/
     margin-left:auto;/*div水平居中*/
@@ -32,13 +33,96 @@
 .sideboard{
     position: fixed; 
     width: auto;
-    max-width:12%; 
+    max-width: 110px; 
+    min-width: 110px;
     height: auto; 
     left: 0px; 
     overflow: scroll;
     border-radius: 10px;
 }
 
+.side-btn{
+    margin-top: 5px;
+}
+
+.fonts{
+    font-family: '../font/H.ttf';
+    font-weight: bolder;
+    margin-left: 30px;
+}
+
 .main-content{
+    height: 2000px;
     border-radius: 20px;
+    margin-right: 20px;
+    margin-left: 120px;
+}
+
+.prod{
+    font-family: '../font/H.ttf';
+    font-weight: bolder;
+    margin-left: 105px;
+    color: #008000;
+}
+
+.prod2{
+    font-family: '../font/H.ttf';
+    font-weight: bolder;
+    margin-left: 35px;
+    color: #008000;
+}
+
+.indu{
+    color: #0000FF;
+    font-family: '../font/H.ttf';
+    font-weight: bolder;
+    margin-left: 100px;
+}
+
+.example{
+    color: #ff004c;
+    font-family: '../font/H.ttf';
+    font-weight: bolder;
+    margin-left: 100px;
+}
+.return{
+    color: #c2c51b;
+    font-family: '../font/H.ttf';
+    font-weight: bolder;
+    /*margin-left: 50px;*/
+}
+
+.title{
+    color: #A31515;
+}
+
+.in-title{
+    margin-left: 110px;
+}
+
+.no-show{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.APIs{
+    width: 30%;
+    height: 50%;
+    /*border:1px solid #ccc;*/
+    float: left;
+    box-sizing: border-box;
+    overflow: hidden; /*超出长度的文字隐藏*/
+}
+.APIs2{
+    margin-left: 10px;
+    width: 65%;
+    height: 50%px;
+    /*border:1px solid #ccc;*/
+    float: left;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 25px;
 }
