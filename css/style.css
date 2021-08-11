@@ -8,3 +8,37 @@
     height: 23px;
     margin-right: 3px;
 }
+
+.top-title{
+    height: 50px;
+    width: 500px;
+    text-align: center; 
+    /*line-height: 200px;文字水平居中*/
+    margin-left:auto;/*div水平居中*/
+    margin-right: auto;
+}
+
+.input_text{
+    text-align: center; 
+    /*line-height: 30px;文字水平居中*/
+    margin:auto;/*div水平居中*/
+}
+
+.index-p{
+    font-weight:700;
+    margin:auto;/*div水平居中*/
+}
+
+.sideboard{
+    position: fixed; 
+    width: auto;
+    max-width:12%; 
+    height: auto; 
+    left: 0px; 
+    overflow: scroll;
+    border-radius: 10px;
+}
+
+.main-content{
+    border-radius: 20px;
+}
