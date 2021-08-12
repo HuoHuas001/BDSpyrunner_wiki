@@ -51,11 +51,17 @@
     margin-left: 30px;
 }
 
-.main-content{
+.block-main-content{
     height: 2000px;
     border-radius: 20px;
     margin-right: 20px;
     margin-left: 120px;
+}
+
+.none-main-content{
+    height: 2000px;
+    border-radius: 20px;
+    margin: auto;
 }
 
 .prod{
@@ -109,23 +115,48 @@
 }
 
 .APIs{
-    width: 30%;
-    height: 50%;
     /*border:1px solid #ccc;*/
+    width: 50%;
+    height: auto;
     float: left;
     box-sizing: border-box;
-    overflow: hidden; /*超出长度的文字隐藏*/
+    border-radius: 5px;
+    margin: auto;
 }
 .APIs2{
-    margin-left: 10px;
-    width: 65%;
-    height: 50%px;
+    width: 95%;
+    max-width: 700px;
+    height: 50%;
+    margin-right: 25%;
     /*border:1px solid #ccc;*/
     float: left;
     box-sizing: border-box;
     background-color: white;
-    border-radius: 25px;
-    white-space:normal; 
-    word-break:break-all;
+    border: 5px double #FF4081;
+    margin-top: 10px;
+    border-radius: 10px;
+    word-wrap:break-word;  
+    word-break:break-all;  
     overflow: hidden;
+}
+
+.drop_down{
+    background-color: #BBDEFB;
+    border: 0px solid #2962FF;
+    border-radius: 5px;
+    color: #2962FF;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.codes{
+    width: 95%;
+    border: 1px solid #1E88E5;
+    margin: auto;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+.line{
+    color: #757575;
 }
