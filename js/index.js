@@ -42,12 +42,26 @@ $('#APIselect').on('close.mdui.select', function () {
     apis[index].className = 'API show'
 });
 
+//显示属性
+var atbs2 = document.getElementsByClassName('EntityATB');
+$('#EntityATBselect').on('close.mdui.select', function () {
+    var select_list2 = document.getElementById("EntityATBselect")
+    var index2=select_list2.selectedIndex
+    for(var i = 0;i<atbs2.length;i++){
+        atbs2[i].className = 'EntityATB'
+        atbs2[i].style.display = "none"
+    }
+    atbs2[index2].className = 'EntityATB'
+    atbs2[index2].style.display = "block"
+    console.log(atbs2[index2].className)
+});
+
 
 //显示页面
 var sidebar = document.getElementById('left')
 var main_content = document.getElementById('main')
 setInterval(function(){
-    if(body.clientWidth<600){
+    if(body.clientWidth<550){
         main_content.className = 'mdui-color-yellow-100 none-main-content'
         indexBtn.style='display:block'
     }

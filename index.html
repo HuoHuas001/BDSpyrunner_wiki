@@ -20,7 +20,7 @@
    </head>
    <body id="Body" class="mdui-appbar-with-toolbar mdui-color-grey-300" style="min-width: 500px;">
         <header class="mdui-appbar mdui-appbar-fixed" >
-			<div class="mdui-toolbar mdui-color-blue-a400" style='height: 70px;'>
+			<div class="mdui-toolbar mdui-color-grey-900" style='height: 70px;'>
                 <img src='img/logo.png' class="logo-img img-responsive" alt="PYR logo">
 				<a href="javascript:;" class="mdui-typo-headline" onclick="back_to_index()">PYR Wiki-Home</a>
 				
@@ -115,9 +115,9 @@
                 <div class="mdui-typo">
                     <hr/>
                 </div>
-                <!--API-->
-                <h1 class="mdui-text-color-black-text"><a name='api'>2.API接口</a></h1>
-                <div>
+                <!--===========================API====================================-->
+                <div style="float: left;">
+                    <h1 class="mdui-text-color-black-text"><a name='api'>2.API接口-mc</a></h1>
                     <div class="drop_down mdui-shadow-2 mdui-hoverable" style="width: max-content;">
                         <select id="APIselect" class="mdui-select APIs" mdui-select>
                             <option value="1">getVersion</option>
@@ -294,7 +294,318 @@ mc.setListener('onMobHurt',onMobHurt)
                         </div>
                     </div>
                 </div>
-            </div>
+                <!--===============================Entity对象==============================================-->
+                <div style="float: left; margin-left: 30px;">
+                    <h1 class="mdui-text-color-black-text"><a name='api'>2.API接口-entity</a></h1>
+                    <div style="margin-left: 10px;display: inline-block" class="drop_down mdui-shadow-2">
+                        <select id="EntityATBselect" class="mdui-select APIs" mdui-select>
+                            <option value="1">属性:name</option>
+                            <option value="2">属性:uuid</option>
+                            <option value="3">属性:xuid</option>
+                            <option value="4">属性:pos</option>
+                            <option value="5">属性:did</option>
+                            <option value="6">属性:isstand</option>
+                            <option value="7">属性:issneak</option>
+                            <option value="8">属性:health</option>
+                            <option value="9">属性:maxhealth</option>
+                            <option value="10">属性:perm</option>
+                            <option value="11">属性:deviceid</option>
+                            <option value="12">属性:ip</option>
+                            <option value="13">属性:deviceos</option>
+                        </select>
+                    </div>
+                    <div style="margin-left: 10px;display: inline-block" class="drop_down mdui-shadow-2">
+                        <select id="EntityAPIselect" class="mdui-select APIs" mdui-select>
+                            <option value="14">API:getAllItem</option>
+                            <option value="15">API:setAllItem</option>
+                            <option value="16">API:setHand</option>
+                            <option value="17">API:addItem</option>
+                            <option value="18">API:removeItem</option>
+                            <option value="19">API:teleport</option>
+                            <option value="20">API:sendCommandPacket</option>
+                            <option value="21">API:sendTextPacket</option>
+                            <option value="22">API:resendAllChunks</option>
+                            <option value="23">API:disconnect</option>
+                            <option value="24">API:transferServer</option>
+                            <option value="25">API:getScore</option>
+                            <option value="26">API:modifyScore</option>
+                            <option value="27">API:addLevel</option>
+                            <option value="28">API:setBossBar</option>
+                            <option value="29">API:removeBossBar</option>
+                            <option value="30">API:addTag</option>
+                            <option value="31">API:removeTag</option>
+                            <option value="32">API:getTags</option>
+                            <option value="33">API:setSidebar</option>
+                            <option value="34">API:removeSidebar</option>
+                            <option value="35">API:sendSimpleForm</option>
+                            <option value="36">API:sendModalForm</option>
+                            <option value="37">API:sendCustomForm</option>
+                        </select>
+                    </div>
+                    <div id='entitymod' class='APIs2 mdui-hoverable mdui-shadow-3'>
+                        <div class="EntityATB show">
+                            <h3 class="fonts title in-title">name -> <span class="return">str</span></h3>
+                            <p class="prod">>> 获取/修改玩家名字</p>
+                            <div class="mdui-typo codes">
+                                <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                <pre>#获取玩家名
+Player_Name = player.name
+print('原玩家名:',Player_Name)
+#修改玩家名
+player.name = 'abcd'
+Player_Name = player.name
+print('修改后的玩家名:',Player_Name)
+                                </pre>
+                                <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">运行结果</span>
+                                <pre>
+原玩家名: abcd123
+修改后的玩家名:abcd
+                                </pre>
+                            </div>
+                        </div>
+
+                                <div class="EntityATB no-show">
+                                    <h3 class="fonts title in-title">uuid -> <span class="return">str</span></h3>
+                                    <p class="prod">>> 获取玩家的uuid</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>Player_Uuid = player.uuid
+print('玩家uuid:',Player_Uuid)
+                                        </pre>
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">运行结果</span>   
+                                        <pre>玩家uuid: 1B5580BA-7429-7C2E-B72F-9D45FA621529
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityATB no-show">
+                                    <h3 class="fonts title in-title">xuid -> <span class="return">str</span></h3>
+                                    <p class="prod">>> 获取玩家的xuid</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>Player_Xuid = player.xuid
+print('玩家Xuid:',Player_Xuid)
+                                        </pre>
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">运行结果</span>   
+                                        <pre>玩家xuid: 1145141919810
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityATB no-show">
+                                    <h3 class="fonts title in-title">pos -> <span class="return">list</span></h3>
+                                    <p class="prod">>> 获取玩家的坐标列表</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>Player_Pos = player.pos
+print('玩家坐标:',Player_Pos)
+                                        </pre>
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">运行结果</span>   
+                                        <pre>玩家坐标: [0.1,0.1,0.1]
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityATB no-show">
+                                    <h3 class="fonts title in-title">did -> <span class="return">int</span></h3>
+                                    <p class="prod">>> 获取玩家的维度</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>Player_Did = player.did
+print('玩家维度:',Player_Did)
+                                        </pre>
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">运行结果</span>   
+                                        <pre>玩家维度: 0
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityATB no-show">
+                                    <h3 class="fonts title in-title">isstand -> <span class="return">bool</span></h3>
+                                    <p class="prod">>> 实体是否站立在方块上</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>Player_Isstand = player.isstand
+print('实体是否站立在方块上:',Player_Isstand)
+                                        </pre>
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">运行结果</span>   
+                                        <pre>实体是否站立在方块上: True
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityATB no-show">
+                                    <h3 class="fonts title in-title">issneak -> <span class="return">bool</span></h3>
+                                    <p class="prod">>> 实体是否潜行</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>Player_Issneak = player.issneak
+print('实体是否潜行:',Player_Issneak)
+                                        </pre>
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">运行结果</span>   
+                                        <pre>玩家xuid: False
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityATB no-show">
+                                    <h3 class="fonts title in-title">health -> <span class="return">int</span></h3>
+                                    <p class="prod">>> 实体当前生命</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>Player_Health = player.health
+print('实体当前生命:',Player_Health)
+                                        </pre>
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">运行结果</span>   
+                                        <pre>实体当前生命: 10
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityATB no-show">
+                                    <h3 class="fonts title in-title">maxhealth -> <span class="return">int</span></h3>
+                                    <p class="prod">>> 实体最大生命</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>Player_Maxhealth = player.maxhealth
+print('实体最大生命:',Player_Maxhealth)
+                                        </pre>
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">运行结果</span>   
+                                        <pre>实体最大生命: 20
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityATB no-show">
+                                    <h3 class="fonts title in-title">perm -> <span class="return">int</span></h3>
+                                    <p class="prod">>> 玩家权限值</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>Player_Perm = player.perm
+print('原玩家权限值:',Player_Perm)
+player.perm = 4
+Player_Perm = player.perm
+print('现玩家权限值:',Player_Perm)
+                                        </pre>
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">运行结果</span>   
+                                        <pre>原玩家权限值: 0
+现玩家权限值: 4
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityATB no-show">
+                                    <h3 class="fonts title in-title">deviceid -> <span class="return">str</span></h3>
+                                    <p class="prod">>> 玩家设备ID</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>Player_Deviceid = player.deviceid
+print('玩家设备ID:',Player_Deviceid)
+                                        </pre>
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">运行结果</span>   
+                                        <pre>玩家设备ID: 7FB19C59-46F8-71EB-F059-38E5027E4DCB
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityATB no-show">
+                                    <h3 class="fonts title in-title">deviceos -> <span class="return">int</span></h3>
+                                    <p class="prod">>> 玩家设备操作系统</p>
+                                    <div class="mdui-table-fluid oses">
+                                        <table class="mdui-table mdui-table-hoverable">
+                                          <thead>
+                                            <tr>
+                                              <th>设备ID</th>
+                                              <th>操作系统</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>1</td>
+                                              <td>Android</td>
+                                            </tr>
+                                            <tr>
+                                              <td>2</td>
+                                              <td>iOS</td>
+                                            </tr>
+                                            <tr>
+                                              <td>3</td>
+                                              <td>OSX</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Amazon</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>GearVR</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Hololens</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>电脑Windows10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>电脑Win32（教育版？）</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td>TVOS</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10</td>
+                                                <td>主机PlayStation</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11</td>
+                                                <td>主机Nintendo</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12</td>
+                                                <td>主机Xbox</td>
+                                            </tr>
+                                            <tr>
+                                                <td>13</td>
+                                                <td>手机Windows Phone</td>
+                                            </tr>
+                                            <tr>
+                                                <td>14</td>
+                                                <td>未知系统</td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </div>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>Player_Deviceos = player.deviceid
+print('玩家设备操作系统:',Player_Deviceos)
+                                        </pre>
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">运行结果</span>   
+                                        <pre>玩家设备操作系统: 1
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityATB no-show">
+                                    <h3 class="fonts title in-title">ip -> <span class="return">str</span></h3>
+                                    <p class="prod">>> 玩家IP地址</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>Player_IP = player.ip
+print('玩家IP:',Player_IP)
+                                        </pre>
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">运行结果</span>   
+                                        <pre>玩家IP: 0.0.0.0
+                                        </pre>
+                                    </div>
+                                </div>
+
+                            </div>
+                </div>
         </div>
         <script src='js/index.js'></script>
         <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery"> -->
