@@ -60,14 +60,17 @@ $('#EntityATBselect').on('close.mdui.select', function () {
 //显示页面
 var sidebar = document.getElementById('left')
 var main_content = document.getElementById('main')
+var entity_box = document.getElementById("divbox")
 setInterval(function(){
     if(body.clientWidth<550){
         main_content.className = 'mdui-color-yellow-100 none-main-content'
         indexBtn.style='display:block'
+        entity_box.style.marginLeft = '0px'
     }
     else{
         main_content.className = 'mdui-color-yellow-100 block-main-content'
         indexBtn.style='display:none'
+        entity_box.style.marginLeft = '30px'
     }
 },0)
 
