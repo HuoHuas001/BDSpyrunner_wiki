@@ -44,17 +44,30 @@ $('#APIselect').on('close.mdui.select', function () {
 
 //显示属性
 var atbs2 = document.getElementsByClassName('EntityATB');
+var APIs = document.getElementsByClassName('EntityAPI')
 $('#EntityATBselect').on('close.mdui.select', function () {
     var select_list2 = document.getElementById("EntityATBselect")
     var index2=select_list2.selectedIndex
     for(var i = 0;i<atbs2.length;i++){
-        atbs2[i].className = 'EntityATB'
-        atbs2[i].style.display = "none"
+        atbs2[i].className = 'EntityATB no-show'
     }
-    atbs2[index2].className = 'EntityATB'
-    atbs2[index2].style.display = "block"
-    console.log(atbs2[index2].className)
+    for(var b = 0;b<APIs.length;b++){
+        APIs[b].className = 'EntityAPI no-show'
+    }
+    atbs2[index2].className = 'EntityATB show'
 });
+
+$('#EntityAPIselect').on('close.mdui.select', function (){
+    var select_list3 = document.getElementById("EntityAPIselect")
+    var index3=select_list3.selectedIndex
+    for(var i = 0;i<atbs2.length;i++){
+        atbs2[i].className = 'EntityATB no-show'
+    }
+    for(var b = 0;b<APIs.length;b++){
+        APIs[b].className = 'EntityAPI no-show'
+    }
+    APIs[index3].className = 'EntityAPI show'
+})
 
 
 //显示页面

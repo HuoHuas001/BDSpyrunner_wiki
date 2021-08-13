@@ -310,8 +310,8 @@ mc.setListener('onMobHurt',onMobHurt)
                             <option value="9">属性:maxhealth</option>
                             <option value="10">属性:perm</option>
                             <option value="11">属性:deviceid</option>
-                            <option value="12">属性:ip</option>
-                            <option value="13">属性:deviceos</option>
+                            <option value="12">属性:deviceos</option>
+                            <option value="13">属性:ip</option>
                         </select>
                     </div>
                     <div style="margin-left: 10px;display: inline-block" class="drop_down mdui-shadow-2">
@@ -443,7 +443,7 @@ print('实体是否站立在方块上:',Player_Isstand)
 print('实体是否潜行:',Player_Issneak)
                                         </pre>
                                         <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">运行结果</span>   
-                                        <pre>玩家xuid: False
+                                        <pre>实体是否潜行: False
                                         </pre>
                                     </div>
                                 </div>
@@ -600,6 +600,280 @@ print('玩家IP:',Player_IP)
                                         </pre>
                                         <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">运行结果</span>   
                                         <pre>玩家IP: 0.0.0.0
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityAPI no-show">
+                                    <h3 class="fonts title in-title">getAllItem() -> <span class="return">str</span></h3>
+                                    <p class="prod">>> 获取玩家所有物品，返回的是JSON字符串</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>Player_Items = player.getAllItem()
+print('玩家所有物品:',Player_Items)
+                                        </pre>
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">运行结果</span>   
+                                        <pre>玩家所有物品: {...}
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityAPI no-show">
+                                    <h3 class="fonts title in-title">setAllItem(物品Json:str) -> <span class="return">none</span></h3>
+                                    <p class="prod">>> 设置玩家所有物品</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>player.setAllItem('{...}')
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityAPI no-show">
+                                    <h3 class="fonts title in-title">setHand(物品Json:str) -> <span class="return">none</span></h3>
+                                    <p class="prod">>> 设置玩家手中物品</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>player.setHand('{...}')
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityAPI no-show">
+                                    <h3 class="fonts title in-title">addItem(物品Json:str) -> <span class="return">none</span></h3>
+                                    <p class="prod">>> 新增物品</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>player.addItem('{...}')
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityAPI no-show">
+                                    <h3 class="fonts title in-title">removeItem(格子:int,数量:int) -> <span class="return">none</span></h3>
+                                    <p class="prod">>> 移除玩家背包a1格子的a2个物品</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>player.removeItem(1,1)
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityAPI no-show">
+                                    <h3 class="fonts title in-title">teleport(X坐标:float,Y坐标:float,Z坐标float,维度:int) -> <span class="return">none</span></h3>
+                                    <p class="prod">>> 传送玩家到指定坐标和维度</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>player.teleport(1,2,3,1)
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityAPI no-show">
+                                    <h3 class="fonts title in-title">sendCommandPacket(命令:str) -> <span class="return">none</span></h3>
+                                    <p class="prod">>> 模拟玩家执行命令</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>player.sendCommandPacket('cmd')
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityAPI no-show">
+                                    <h3 class="fonts title in-title">sendTextPacket(文本:str,类型:int) -> <span class="return">none</span></h3>
+                                    <p class="prod">>> 向玩家发送一个文本<br>
+>> 消息类型: Raw = 0 Chat = 1 JukeboxPopup = 4 SystemMessage = 6 Whisper = 7 Announcement = 8 TextObject = 9
+                                    </p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>player.sendTextPacket('114514',0)
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityAPI no-show">
+                                    <h3 class="fonts title in-title">resendAllChunks() -> <span class="return">none</span></h3>
+                                    <p class="prod">>> 刷新玩家区块</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>player.resendAllChunks()
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityAPI no-show">
+                                    <h3 class="fonts title in-title">disconnect(提示:str) -> <span class="return">none</span></h3>
+                                    <p class="prod">>> 断开玩家连接</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>player.disconnect('§c你被ban了!')
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityAPI no-show">
+                                    <h3 class="fonts title in-title">transferServer(服务器IP:str,端口:int) -> <span class="return">none</span></h3>
+                                    <p class="prod">>> 传送玩家到指定服务器</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>player.transferServer('11.4.5.14',1919)
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityAPI no-show">
+                                    <h3 class="fonts title in-title">getScore(计分板名:str) -> <span class="return">int</span></h3>
+                                    <p class="prod">>> 获取玩家计分板分数</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>Player_Money = player.getScore('money')
+print('玩家现在的金币:',Player_Money)
+                                        </pre>
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">运行结果</span>   
+                                        <pre>玩家现在的金币: 114514
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityAPI no-show">
+                                    <h3 class="fonts title in-title">modifyScore(计分板:str,分数:int,修改模式:int) -> <span class="return">none</span></h3>
+                                    <p class="prod">>> 修改玩家分数，第三个参数是修改模式{0:set,1:add,2:remove}</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>Player_Money = player.getScore('money')
+print('玩家原来的金币:',Player_Money)
+player.modifyScore('money',1,1)
+Player_Money = player.getScore('money')
+print('玩家现在的金币:',Player_Money)
+                                        </pre>
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">运行结果</span>   
+                                        <pre>玩家现在的金币: 114514
+玩家现在的金币: 114515
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityAPI no-show">
+                                    <h3 class="fonts title in-title">addLevel() -> <span class="return">none</span></h3>
+                                    <p class="prod">>> 增加玩家经验等级</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>player.addLevel(1)
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityAPI no-show">
+                                    <h3 class="fonts title in-title">setBossBar(Boss栏文本str,血条百分比:float) -> <span class="return">none</span></h3>
+                                    <p class="prod">>> 设置玩家BOSS栏，a2是血条百分比0-1</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>player.setBossBar('114514',1)
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityAPI no-show">
+                                    <h3 class="fonts title in-title">removeBossBar() -> <span class="return">none</span></h3>
+                                    <p class="prod">>> 移除玩家BOSS栏</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>player.removeBossBar()
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityAPI no-show">
+                                    <h3 class="fonts title in-title">addTag(标签名:str) -> <span class="return">none</span></h3>
+                                    <p class="prod">>> 增加标签</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>player.addTag('test')
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityAPI no-show">
+                                    <h3 class="fonts title in-title">removeTag(标签名:str) -> <span class="return">none</span></h3>
+                                    <p class="prod">>> 移除标签</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>player.removeTag('test')
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityAPI no-show">
+                                    <h3 class="fonts title in-title">getTags() -> <span class="return">list</span></h3>
+                                    <p class="prod">>> 获取所有标签</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>Tags = player.getTags()
+print('玩家标签:',Tags)
+                                        </pre>
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">运行结果</span>   
+                                        <pre>玩家标签:['test']
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityAPI no-show">
+                                    <h3 class="fonts title in-title">setSidebar(标题:str,内容Json:str) -> <span class="return">none</span></h3>
+                                    <p class="prod">>> 设置玩家侧边栏，原理是发包</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>player.setSidebar('自定义侧边栏', '{"第一行":0, "第二行":2, "我在哪行?":3}')
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityAPI no-show">
+                                    <h3 class="fonts title in-title">removeSidebar() -> <span class="return">none</span></h3>
+                                    <p class="prod">>> 移除玩家自定义侧边栏</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>player.removeSidebar()
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityAPI no-show">
+                                    <h3 class="fonts title in-title">sendSimpleForm(表单标题:str,文本:str,按钮:str) -> <span class="return">int</span></h3>
+                                    <p class="prod">>> 向指定的玩家发送一个简单表单</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>FormID = player.sendSimpleForm('致命选项', '请选择:', '[{"text":"生存"},{"text":"死亡"},{"text":"求助"}]')
+print('表单ID:',FormID)
+                                        </pre>
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">运行结果</span>   
+                                        <pre>表单ID:1
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityAPI no-show">
+                                    <h3 class="fonts title in-title">sendModalForm(表单标题:str,文本:str,按钮1:str,按钮2:str) -> <span class="return">int</span></h3>
+                                    <p class="prod">>> 向指定的玩家发送一个模式对话框</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>FormID = player.sendModalForm('没有第三个选项', '请选择:', '生存', '死亡')
+print('表单ID:',FormID)
+                                        </pre>
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">运行结果</span>   
+                                        <pre>表单ID:2
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="EntityAPI no-show">
+                                    <h3 class="fonts title in-title">sendCustomForm(表单Json:str) -> <span class="return">int</span></h3>
+                                    <p class="prod">>> 向指定的玩家发送一个自定义表单</p>
+                                    <div class="mdui-typo codes">
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">代码示例</span>
+                                        <pre>FormID = player.sendCustomForm('{"content":[{"type":"label","text":"这是一个文本标签"},{"placeholder":"水印文本","default":"","type":"input","text":""},{"default":true,"type":"toggle","text":"开关~或许是吧"},{"min":0.0,"max":10.0,"step":2.0,"default":3.0,"type":"slider","text":"游标滑块！？"},{"default":1,"steps":["Step1","Step2","Step 3"],"type":"step_slider","text":"矩阵滑块？!"},{"default":1,"options":["Option 1","Option2","Option3"],"type":"dropdown","text":"如你所见 下拉框"}], "type":"custom_form","title":"这是一个自定义窗体"}')
+print('表单ID:',FormID)
+                                        </pre>
+                                        <span style="color: #2979FF; font-weight: bolder;margin-left: 5px;">运行结果</span>   
+                                        <pre>表单ID:3
                                         </pre>
                                     </div>
                                 </div>
