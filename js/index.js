@@ -89,6 +89,8 @@ setInterval(function(){
 
 var inst2 = new mdui.Menu('#indexBtn', '#index');
 var indexBtn = document.getElementById("indexBtn");
+var abk
 indexBtn.addEventListener("click", function(e){
     inst2.open();
 });
+
